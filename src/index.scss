@@ -1,0 +1,138 @@
+$text-primary: #4d4d52;
+$text-translation: #d44343;
+$text-light: #dddddd;
+$text-note: #dedede;
+
+$border: #ececec;
+
+$primary: #393646f0;
+$primary-disabled: #6e6e6ef0;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  border: 0;
+  background-color: $primary;
+  padding: 4px 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  color: $text-light;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($primary, 10);
+  }
+  &:disabled {
+    background-color: $primary-disabled;
+    cursor: default;  
+  }
+
+  @media (min-width: 760px) {
+    font-size: 16px;
+  }
+}
+
+input[type="checkbox" i] {
+  width: 16px;
+  height: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.divider {
+  border-bottom: 1px solid $border;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  color: $text-primary;
+  margin: 10px 0;
+
+  &-title {
+    font-size: 24px;
+  }
+  &-version {
+    margin-left: 5px;
+    font-size: 16px;
+    color: $text-note;
+  }
+
+  @media (min-width: 760px) {
+    &-title {
+      font-size: 28px;
+    }
+    &-version {
+      font-size: 18px;
+    }
+  }
+}
+
+.input-container {
+  margin: 10px 0;
+
+  input {
+    padding: 6px;
+    outline: none;
+    font-size: 18px;
+    margin: 5px 0 5px 10px ;
+    border: 1px solid $border;
+    min-width: 200px;
+    width: 25%;
+  
+    &:focus {
+      border: 1px solid darken($border, 7);
+    }
+  }
+}
+
+.rows-container {
+  margin: 10px 0;
+
+  .row-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45% 8%;
+    column-gap: 1%;
+    background-color: #c9c9c930;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    .word, .translate {
+      max-width: 100%;
+      word-wrap: break-word;
+      font-size: 16px;
+      padding: 6px 2px;
+      @media (min-width: 1260px) {
+        font-size: 18px;
+      }
+      @media (min-width: 1260px) {
+        font-size: 20px;
+      }
+    }
+
+    .translate {
+      color: $text-translation;
+    }
+
+    .checkbox-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 760px) {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+  }
+}
