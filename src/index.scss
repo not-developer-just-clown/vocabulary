@@ -55,7 +55,7 @@ input[type="checkbox" i] {
   display: flex;
   align-items: flex-end;
   color: $text-primary;
-  margin: 10px 0;
+  margin: 10px 5px;
 
   &-title {
     font-size: 24px;
@@ -77,7 +77,7 @@ input[type="checkbox" i] {
 }
 
 .input-container {
-  margin: 10px 0;
+  margin: 10px;
 
   input {
     padding: 6px;

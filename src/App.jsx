@@ -66,7 +66,7 @@ class App extends React.Component {
     return <div className="container">
       <div className="header">
         <div className="header-title">Ваш личный словарик</div>
-        <div className="header-version">v1.0.0</div>
+        <div className="header-version">v1.0.1</div>
       </div>
 
       <div className="divider"></div>
@@ -83,7 +83,7 @@ class App extends React.Component {
 
       <div className="divider"></div>
 
-      <div style={{ margin: '10px 0' }}>
+      <div style={{ margin: '10px' }}>
         <button disabled={Object.keys(this.state.selectedRows).length != 1} onClick={this.handleOnEditRow}>Редактировать</button>
         <button disabled={Object.keys(this.state.selectedRows).length == 0 || this.state.isEditNow != undefined} onClick={this.handleOnDeleteRow}>Удалить</button>
       </div>
