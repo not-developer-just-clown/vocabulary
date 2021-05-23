@@ -1,0 +1,15 @@
+{
+  "name": "Словарик",
+  "theme_color": "#464b4e",
+  "background_color": "#394249",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "./outline_article_black_24dp",
+      "size": "24x24",
+      "type": "image/png"
+    }
+  ]
+}
