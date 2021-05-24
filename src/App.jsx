@@ -54,9 +54,14 @@ class App extends React.Component {
   }
   handleOnDeleteRow = () => {
     const state = { ...this.state };
+    const idArr = [];
     Object.keys(state.selectedRows).forEach((id) => {
-      state.data.splice(state.selectedRows[id], 1);
+      idArr.push(state.selectedRows[id]);
     });
+    idArr.sort((a, b) => b - a);
+    idArr.forEach((i) => {
+      state.data.splice(i, 1);
+    })
     state.selectedRows = {};
     localStorage.setItem('l23h4o2upqsaf', JSON.stringify(state.data));
     this.setState(state);
