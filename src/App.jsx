@@ -34,7 +34,7 @@ class App extends React.Component {
     };
     state.isEditNow != null
       ? state.data[state.isEditNow] = row
-      : state.data.push(row)
+      : state.data.unshift(row)
     state.isEditNow = null;
     state.selectedRows = {};
     state.wordInputValue = '';
